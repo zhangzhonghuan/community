@@ -2,7 +2,7 @@
 ## 我的社区
 
 [演示](localhost:8887)
-![](https://cdn.jsdelivr.net/gh/zhgetyou/mycdn/img/portrait.jpg)
+
 
 ## 快速运行
 1. 安装必备工具  
