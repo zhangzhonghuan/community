@@ -3,7 +3,6 @@
 
 [演示](localhost:8887)
 
-![](https://ws1.sinaimg.cn/large/007xSFjzly1g6a18juzhnj30ku08cn6i.jpg)
 
 ## 介绍
 controller ：
@@ -18,29 +17,33 @@ model:用于存放我们的实体类，与数据库中的属性值基本保持�
 
 ## 资料
 
-[Spring 文档](https://spring.io/guides)
-
-[Spring Web](https://spring.io/guides/gs/serving-web-content/)
-
-[es](https://elasticsearch.cn/explore)
-
-[Github deploy key](https://developer.github.com/v3/guides/managing-deploy-leys/#deploy-keys)
-
+[Spring 文档](https://spring.io/guides)    
+[Spring Web](https://spring.io/guides/gs/serving-web-content/)   
+[es](https://elasticsearch.cn/explore)    
+[Github deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys)    
+[Bootstrap](https://v3.bootcss.com/getting-started/)    
+[Github OAuth](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)    
 [Bootstrap]( https://v3.bootcss.com/getting-started)
-
-[Github OAuth]( https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)
+[Spring](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support)    
+[菜鸟教程](https://www.runoob.com/mysql/mysql-insert-query.html)    
+[Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#setting-attribute-values)    
+[Spring Dev Tool](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#using-boot-devtools)  
+[Spring MVC](https://docs.spring.io/spring/docs/5.0.3.RELEASE/spring-framework-reference/web.html#mvc-handlermapping-interceptor)  
+[Markdown 插件](http://editor.md.ipandao.com/)   
+[UFfile SDK](https://github.com/ucloud/ufile-sdk-java)  
+[Count(*) VS Count(1)](https://mp.weixin.qq.com/s/Rwpke4BHu7Fz7KOpE2d3Lw)  
 
 ## 工具
+[Git](https://git-scm.com/download)   
+[Visual Paradigm](https://www.visual-paradigm.com)    
+[Flyway](https://flywaydb.org/getstarted/firststeps/maven)  
+[Lombok](https://www.projectlombok.org)    
+[ctotree](https://www.octotree.io/)   
+[Table of content sidebar](https://chrome.google.com/webstore/detail/table-of-contents-sidebar/ohohkfheangmbedkgechjkmbepeikkej)    
+[One Tab](https://chrome.google.com/webstore/detail/chphlpgkkbolifaimnlloiipkdnihall)    
+[Live Reload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related)  
+[Postman](https://chrome.google.com/webstore/detail/coohjcphdfgbiolnekdpbcijmhambjff)
 
-[Git]( https://git-scm.com/download)  
-
-[Visual Paradigm](https://www.visual-paradigm.com)  
- 
-[Flyway](https://flywaydb.org/getstarted/firststeps/maven)
-
-[lombok](https://www.projectlombok.org)
-
-[Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#setting-attribute-values)
 ## 脚本
 ```sql
 CREATE TABLE USER(
@@ -87,5 +90,4 @@ mvn flyway:migrate
 ## 存在的问题
 
 1.给一段时间发布问题后在数据库中产生的creator不一样，所以我的问题只显示了最近发布的问题
-
 
