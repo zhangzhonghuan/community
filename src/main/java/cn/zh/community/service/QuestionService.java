@@ -20,6 +20,7 @@ import java.util.List;
  */
 @Service
 public class QuestionService {
+
     @Autowired
     private QuestionMapper questionMapper;
 
@@ -51,7 +52,6 @@ public class QuestionService {
         List<Question> questions = questionMapper.list(offset,size);
         List<QuestionDTO> questionDTOList = new ArrayList<>();
 
-
         for (Question question : questions) {
             User user = userMapper.findById(question.getCreator());
             QuestionDTO questionDTO = new QuestionDTO();
@@ -82,7 +82,6 @@ public class QuestionService {
         if (page > totalPage) {
             page = totalPage;
         }
-
 
         paginationDTO.setPagination(totalPage,page);
         //size*(page - 1)
