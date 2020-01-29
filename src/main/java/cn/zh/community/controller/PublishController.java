@@ -1,12 +1,14 @@
 package cn.zh.community.controller;
 
-import cn.zh.community.mapper.QuestionMapper;
+import cn.zh.community.dto.QuestionDTO;
 import cn.zh.community.model.Question;
 import cn.zh.community.model.User;
+import cn.zh.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -21,8 +23,24 @@ import javax.servlet.http.HttpServletRequest;
 public class PublishController {
 
     @Autowired
-    private QuestionMapper questionMapper;
+    private QuestionService questionService;
 
+    /**
+     * 编辑问题
+     * @param id
+     * @return
+     */
+    @GetMapping("/publish/{id}")
+    public String edit(@PathVariable(name = "id") Integer id,
+                       Model model) {
+        QuestionDTO question = questionService.getById(id);
+        model.addAttribute("title",question.getTitle());
+        model.addAttribute("description",question.getDescription());
+        model.addAttribute("tag",question.getTag());
+        model.addAttribute("id",question.getId());
+        return "publish";
+
+    }
     @GetMapping("/publish")
     public String publish() {
         return "publish";
@@ -32,6 +50,8 @@ public class PublishController {
             @RequestParam(value = "title",required = false) String title,
             @RequestParam(value = "description",required = false) String description,
             @RequestParam(value = "tag",required = false) String tag,
+            //接收publish.html中<input type="hidden" name="id" th:value="${id}">的id值
+            @RequestParam(value = "id",required = false) Integer id,
             HttpServletRequest request,
             Model model) {
 
@@ -61,9 +81,9 @@ public class PublishController {
         question.setDescription(description);
         question.setTag(tag);
         question.setCreator(user.getId());
-        question.setGmtCreate(System.currentTimeMillis());
-        question.setGmtModified(System.currentTimeMillis());
-        questionMapper.create(question);
+
+        question.setId(id);
+        questionService.createOrUpdate(question);
         return "redirect:/";
 
     }
