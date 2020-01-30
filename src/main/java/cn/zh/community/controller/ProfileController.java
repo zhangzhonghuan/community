@@ -35,7 +35,7 @@ public class ProfileController {
         }
 
         if ("questions".equals(action)) {
-            model.addAttribute("section","question");
+            model.addAttribute("section","questions");
             model.addAttribute("sectionName","我的问题");
 
         } else if ("replies".equals(action)) {
