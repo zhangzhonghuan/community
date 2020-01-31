@@ -5,7 +5,7 @@ package cn.zh.community.enums;
  * @date: 2020/1/30 15:30
  * @description:
  */
-public enum  CommentTypeEnum {
+public enum CommentTypeEnum {
     QUESTION(1),
     COMMENT(2);
     private Integer type;
@@ -27,5 +27,4 @@ public enum  CommentTypeEnum {
         }
         return false;
     }
-
 }
