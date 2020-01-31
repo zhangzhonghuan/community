@@ -4,7 +4,9 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
+
     <context id="DB2Tables" targetRuntime="MyBatis3">
+
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"/>
         <jdbcConnection driverClass="org.h2.Driver"
                         connectionURL="jdbc:h2:~/community"
@@ -12,30 +14,29 @@
                         password="123">
         </jdbcConnection>
 
-        <javaTypeResolver >
-            <property name="forceBigDecimals" value="false" />
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
-        <!--生成java model-->
+
         <javaModelGenerator targetPackage="cn.zh.community.model" targetProject="src/main/java">
-            <property name="enableSubPackages" value="true" />
-            <property name="trimStrings" value="true" />
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources">
-            <property name="enableSubPackages" value="true" />
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <javaClientGenerator type="XMLMAPPER" targetPackage="cn.zh.community.mapper"
                              targetProject="src/main/java">
-            <property name="enableSubPackages" value="true" />
+            <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
         <table tableName="user" domainObjectName="User"/>
         <table tableName="question" domainObjectName="Question"/>
         <table tableName="comment" domainObjectName="Comment"/>
-        <table tableName="notification" domainObjectName="Notification"></table>
+        <table tableName="notification" domainObjectName="Notification"/>
         <table tableName="nav" domainObjectName="Nav"/>
-        <table tableName="ad" domainObjectName="Ad"></table>
-
-        </context>
+        <table tableName="ad" domainObjectName="Ad"/>
+    </context>
 </generatorConfiguration>

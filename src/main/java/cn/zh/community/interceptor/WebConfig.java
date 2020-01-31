@@ -11,6 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @description: 拦截器
  */
 @Configuration
+//@EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
 
     @Autowired

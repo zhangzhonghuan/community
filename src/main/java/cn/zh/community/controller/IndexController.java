@@ -1,5 +1,6 @@
 package cn.zh.community.controller;
 
+import cn.zh.community.cache.HotTagCache;
 import cn.zh.community.dto.PaginationDTO;
 import cn.zh.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 /**
  * @Author: zhanghuan
  * @Date: 2019/10/7 14:53
@@ -15,27 +18,28 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Description:
  */
 @Controller
-public class
-IndexController {
+public class IndexController {
 
     @Autowired
     private QuestionService questionService;
 
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
+    @Autowired
+    private HotTagCache hotTagCache;
 
     @GetMapping("/")
     public String index(Model model,
                         @RequestParam(name = "page", defaultValue = "1") Integer page,
-                        @RequestParam(name = "size", defaultValue = "5") Integer size) {
-
-
-        PaginationDTO pagination = questionService.list(page,size);
-        model.addAttribute("pagination",pagination);
-
+                        @RequestParam(name = "size", defaultValue = "10") Integer size,
+                        @RequestParam(name = "search", required = false) String search,
+                        @RequestParam(name = "tag", required = false) String tag,
+                        @RequestParam(name = "sort", required = false) String sort) {
+        PaginationDTO pagination = questionService.list(search, tag, sort, page, size);
+        List<String> tags = hotTagCache.getHots();
+        model.addAttribute("pagination", pagination);
+        model.addAttribute("search", search);
+        model.addAttribute("tag", tag);
+        model.addAttribute("tags", tags);
+        model.addAttribute("sort", sort);
         return "index";
-
     }
 }
