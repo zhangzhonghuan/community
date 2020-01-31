@@ -106,6 +106,7 @@ create table question
 alter table USER add avatar_url varchar(100);
 ```
 ```bash
+rm ~/community.*
 mvn flyway:migrate
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
