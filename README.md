@@ -118,7 +118,5 @@ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 - 2020-2-22 修复图片大小限制和提问内容为空问题
 - 2020-3-1 添加动态导航栏
 
-## 存在的问题
 
-1.给一段时间发布问题后在数据库中产生的creator不一样，所以我的问题只显示了最近发布的问题
 

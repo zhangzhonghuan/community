@@ -1,5 +1,6 @@
 package cn.zh.community.cache;
 
+
 import cn.zh.community.dto.HotTagDTO;
 import lombok.Data;
 import org.springframework.stereotype.Component;

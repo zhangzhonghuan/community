@@ -1,7 +1,5 @@
 package cn.zh.community.cache;
 
-
-import cn.zh.community.dto.TagDTO;
 import cn.zh.community.dto.TagDTO;
 import org.apache.commons.lang3.StringUtils;
 
@@ -20,12 +18,12 @@ public class TagCache {
         List<TagDTO> tagDTOS = new ArrayList<>();
         TagDTO program = new TagDTO();
         program.setCategoryName("开发语言");
-        program.setTags(Arrays.asList("javascript", "php", "css", "html", "html5", "java", "node.js", "python", "c++", "c", "golang", "objective-c", "typescript", "shell", "swift", "c#", "sass", "ruby", "bash", "less", "asp.net", "lua", "scala", "coffeescript", "actionscript", "rust", "erlang", "perl"));
+        program.setTags(Arrays.asList("javascript", "php", "css", "html", "html5", "java","javaweb", "node.js", "python", "c++", "c", "golang", "objective-c", "typescript", "shell", "swift", "c#", "sass", "ruby", "bash", "less", "asp.net", "lua", "scala", "coffeescript", "actionscript", "rust", "erlang", "perl"));
         tagDTOS.add(program);
 
         TagDTO framework = new TagDTO();
         framework.setCategoryName("平台框架");
-        framework.setTags(Arrays.asList("laravel", "spring", "express", "django", "flask", "yii", "ruby-on-rails", "tornado", "koa", "struts"));
+        framework.setTags(Arrays.asList("laravel", "spring","springMVC", "springboot","mybatis","express", "django", "flask", "yii", "ruby-on-rails", "tornado", "koa", "struts"));
         tagDTOS.add(framework);
 
 
