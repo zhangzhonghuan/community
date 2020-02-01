@@ -4,8 +4,8 @@ import cn.zh.community.enums.AdPosEnum;
 import cn.zh.community.mapper.UserMapper;
 import cn.zh.community.model.User;
 import cn.zh.community.model.UserExample;
-import cn.zh.community.service.AdService;
 import cn.zh.community.service.NotificationService;
+import cn.zh.community.service.impl.AdServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.lang.Nullable;
@@ -31,7 +31,7 @@ public class SessionInterceptor implements HandlerInterceptor {
     @Autowired
     private NotificationService notificationService;
     @Autowired
-    private AdService adService;
+    private AdServiceImpl adService;
 
     @Value("${github.redirect.uri}")
     private String redirectUri;

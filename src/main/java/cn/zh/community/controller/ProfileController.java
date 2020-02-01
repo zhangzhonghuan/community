@@ -2,8 +2,8 @@ package cn.zh.community.controller;
 
 import cn.zh.community.dto.PaginationDTO;
 import cn.zh.community.model.User;
-import cn.zh.community.service.NotificationService;
 import cn.zh.community.service.QuestionService;
+import cn.zh.community.service.impl.NotificationServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +23,7 @@ public class ProfileController {
     @Autowired
     private QuestionService questionService;
     @Autowired
-    private NotificationService notificationService;
+    private NotificationServiceImpl notificationServiceImpl;
 
     @GetMapping("/profile/{action}")
     public String profile(HttpServletRequest request,
@@ -43,7 +43,7 @@ public class ProfileController {
             PaginationDTO paginationDTO = questionService.list(user.getId(), page, size);
             model.addAttribute("pagination", paginationDTO);
         } else if ("replies".equals(action)) {
-            PaginationDTO paginationDTO = notificationService.list(user.getId(), page, size);
+            PaginationDTO paginationDTO = notificationServiceImpl.list(user.getId(), page, size);
             model.addAttribute("section", "replies");
             model.addAttribute("pagination", paginationDTO);
             model.addAttribute("sectionName", "最新回复");
