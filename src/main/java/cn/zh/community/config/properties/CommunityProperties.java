@@ -1,6 +1,7 @@
 package cn.zh.community.config.properties;
 
 import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
+@ConfigurationProperties("communuity")
 public class CommunityProperties {
 
     /**
