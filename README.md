@@ -1,10 +1,10 @@
 
 ## 我的社区
 
-![community](static-files/index.png)
+![我的社区](static-files/index.png)
 
 
-![community](static-files/profile.png)
+![我的问题](static-files/profile.png)
 
 ## 快速运行
 1. 安装必备工具  
