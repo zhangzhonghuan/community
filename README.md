@@ -4,6 +4,8 @@
 ![community](static-files/index.png)
 
 
+![community](static-files/profile.png)
+
 ## 快速运行
 1. 安装必备工具  
 JDK，Maven
