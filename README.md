@@ -6,6 +6,8 @@
 
 ![我的问题](static-files/profile.png)
 
+![发起](static-files/question.png)
+
 ## 快速运行
 1. 安装必备工具  
 JDK，Maven
