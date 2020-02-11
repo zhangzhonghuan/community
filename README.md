@@ -1,7 +1,7 @@
 
 ## 我的社区
 
-[演示](localhost:8887)
+![community](static-files/index.png)
 
 
 ## 快速运行
